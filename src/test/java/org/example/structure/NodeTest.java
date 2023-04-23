@@ -1,9 +1,9 @@
 package org.example.structure;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
+@RunWith(MockitoJUnitRunner.class)
 class NodeTest {
 
     @Test
@@ -27,50 +27,18 @@ class NodeTest {
     }
 
     @Test
-    void getLeftNode() {
+    void getSetLeftNode() {
     }
 
     @Test
-    void getRightNode() {
+    void getSetRightNode() {
     }
 
     @Test
-    void getFeature() {
-    }
-
-    @Test
-    void getPlate() {
+    void getSetFeature() {
     }
 
     @Test
     void isLeft() {
-    }
-
-    @Test
-    void setScanner() {
-    }
-
-    @Test
-    void setWindow() {
-    }
-
-    @Test
-    void setLeftNode() {
-    }
-
-    @Test
-    void setRightNode() {
-    }
-
-    @Test
-    void setFeature() {
-    }
-
-    @Test
-    void setPlate() {
-    }
-
-    @Test
-    void setLeft() {
     }
 }

@@ -4,12 +4,19 @@ import lombok.Getter;
 
 @Getter
 public enum Message {
+    COMPLETE("Complete"),
+    CONFIRM("Confirm"),
+    CONTINUE("Deseja continuar?"),
     CUT_LINE("-----------------------------------------"),
-    INTRO("Pense em um prato que gosta."),
     FEATURE("O prato que pensou é %s?"),
+    GIVE_UP("Desisto!"),
+    INTRO("Pense em um prato que gosta."),
     NEW_FEATURE("%s é ________, mas %s não."),
+    OK("OK"),
     PLATE("O prato que você pensou é %s?"),
+    PROCEED("Aperte enter para seguir!"),
     SUCCESS("acertei de novo!"),
+    TITLE("GORMET GAME"),
     THOUGHT_PLATE("Qual prato você pensou?"),
     YES("sim");
 

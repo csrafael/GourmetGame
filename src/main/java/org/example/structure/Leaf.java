@@ -44,7 +44,7 @@ public class Leaf extends Node{
 
     private String getNewPlate() {
         if(hasWindow()) {
-            return JOptionPane.showInputDialog(getWindow(), THOUGHT_PLATE.getMessage(), "Desisto", 3);
+            return JOptionPane.showInputDialog(getWindow(), THOUGHT_PLATE.getMessage(), GIVE_UP.getMessage(), 3);
         }
         System.out.println(THOUGHT_PLATE.getMessage());
         return getScanner().nextLine();
@@ -53,7 +53,7 @@ public class Leaf extends Node{
     private String getNewFeature(String newPlate) {
         String question = NEW_FEATURE.putComplement(newPlate,this.plate);
         if(hasWindow()) {
-            return JOptionPane.showInputDialog(getWindow(), question, "Complete", 3);
+            return JOptionPane.showInputDialog(getWindow(), question, COMPLETE.getMessage(), 3);
         }
         System.out.println(question);
         return getScanner().nextLine();
@@ -61,7 +61,7 @@ public class Leaf extends Node{
 
     private void showSuccessDialog() {
         if(hasWindow()) {
-            JOptionPane.showMessageDialog(getWindow(), SUCCESS.getMessage(), "Confirm", 1);
+            JOptionPane.showMessageDialog(getWindow(), SUCCESS.getMessage(), CONFIRM.getMessage(), 1);
         }else {
             System.out.println(SUCCESS.getMessage());
         }

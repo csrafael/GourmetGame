@@ -26,22 +26,22 @@ public class Game {
 
         while (running.equals(YES.getMessage())) {
             root.ask(this.root);
-            System.out.println("Deseja continuar?");
+            System.out.println(CONTINUE.getMessage());
             running = scanner.nextLine();
         }
     }
+
     public void graphicRun() {
         createFrame();
         setRoot();
-
     }
 
     private void printIntro() {
         System.out.println(CUT_LINE.getMessage());
         System.out.println(INTRO.getMessage());
-        System.out.println("Aperte enter para seguir!");
-
+        System.out.println(PROCEED.getMessage());
     }
+
     private void setRoot() {
         Node rightNode = new Leaf(window, "bolo de chocolate");
         Node leftNode = new Leaf(window,"lasanha");
@@ -51,12 +51,11 @@ public class Game {
     }
 
     public void createFrame() {
-
-        this.window = new JFrame("JOGO GOURMET");
+        this.window = new JFrame(TITLE.getMessage());
 
         JPanel panel = new JPanel();
 
-        JButton button = new JButton("OK");
+        JButton button = new JButton(OK.getMessage());
         button.addActionListener(e -> root.ask(this.root));
 
         panel.add(new JLabel(INTRO.getMessage()));
